@@ -1162,6 +1162,7 @@ function mpd_add_term_recursively($post_term, &$orig_all_terms_by_id, &$all_term
         'slug' => $post_term->slug,
         'parent' => $parent_id
     ));
+    $all_terms_by_slug[$post_term->slug] = (object) $new_term;
     return $new_term['term_id'];
 }
 
